@@ -1,6 +1,7 @@
 const taskForm = document.getElementById("task-form");
 const taskInput = document.getElementById("task-input");
 const taskList = document.getElementById("task-list");
+const ClearAll = document.getElementById("clear-all");
 
 // add new task
 
@@ -14,6 +15,7 @@ taskForm.addEventListener("submit", function (e) {
 });
 
 //  function add elemant in task
+
 function addTask(text) {
   const li = document.createElement("li");
   li.className = "task";
@@ -31,3 +33,9 @@ function addTask(text) {
   li.appendChild(deleteBtn);
   taskList.appendChild(li);
 }
+
+ClearAll.addEventListener("click" , function(){
+
+taskList.innerHTML = "";
+
+});
